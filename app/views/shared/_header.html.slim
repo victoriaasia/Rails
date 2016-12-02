@@ -1,0 +1,14 @@
+header.header
+  div.header__logo
+    = 'experteese'
+  div.header__menu
+    div.header__menu-first
+      div.header__menu-item
+        = link_to 'Contacts', main_contacts_path
+      div.header__menu-item
+        = link_to 'about', main_about_path
+      div.header__menu-item
+        = link_to 'help', main_help_path
+    div.header__menu-second
+      = link_to 'join now', root_path, class: 'header__menu-link'
+      = link_to 'log in', root_path, class: 'header__menu-link'

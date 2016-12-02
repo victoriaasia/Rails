@@ -1,24 +1,24 @@
-%p#notice= notice
+p#notice= notice
 
-%p
-  %b Name:
+p
+  b Name:
   = @image.name
-%p
-  %b File:
+p
+  b File:
   = @image.file
-%p
-  %b Ave value:
+p
+  b Ave value:
   = @image.ave_value
-%p
-  %b Created at:
+p
+  b Created at:
   = @image.created_at
-%p
-  %b Updated at:
+p
+  b Updated at:
   = @image.updated_at
-%p
-  %b Theme:
+p
+  b Theme:
   = @image.theme_id
 
 = link_to 'Edit', edit_image_path(@image)
-\|
+| \|
 = link_to 'Back', images_path
