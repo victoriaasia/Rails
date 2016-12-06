@@ -1,7 +1,7 @@
 = form_for @image do |f|
   - if @image.errors.any?
     #error_explanation
-      h2= "# pluralize(@image.errors.count, "error")  prohibited this image from being saved:"
+      h2= t('activerecord.errors.template.header', :model => Image.model_name.human, :count => @image.errors.count)
       ul
         - @image.errors.full_messages.each do |msg|
           li= msg
