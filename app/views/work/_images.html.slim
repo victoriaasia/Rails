@@ -1,0 +1,14 @@
+.image
+  .row
+    .col-md-3
+
+      .left_controls
+        .select_theme
+          /= render 'work/button_theme_select', locale: @current_locale
+
+    .col-md-9
+
+    .image_display
+      .row.image
+        .col-md-12
+          /h2.up-theme :title => t('.theme_name')
