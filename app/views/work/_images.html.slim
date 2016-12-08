@@ -1,14 +1,23 @@
-.image
+.image-wrapper
   .row
     .col-md-3
-
-      .left_controls
-        .select_theme
+      = '3'
+      .row.choose-btns
+        .choose-btn.select-theme
           /= render 'work/button_theme_select', locale: @current_locale
+        .choose-btn.my-results
+          /= render 'work/button_list_results'
+        .choose-btn.total-value
 
     .col-md-9
-
-    .image_display
-      .row.image
-        .col-md-12
+      = '9'
+      .row.display-img
+        .display-img__title
           /h2.up-theme :title => t('.theme_name')
+        .display-img__subtitle
+          /h2.up :title => "Image file name"
+        .row
+          .col-md-1.left-control
+          .col-md-10
+            /.img :title => "Default image"
+          .col-md-1.right-control
