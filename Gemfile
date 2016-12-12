@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.5'
 gem "slim-rails"
 gem 'jquery-ui-rails'
 gem 'rails-asset-jqueryui'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '3.3.6'
 gem 'font-awesome-sass'
 gem 'font-awesome-rails'
 gem 'better_errors'
