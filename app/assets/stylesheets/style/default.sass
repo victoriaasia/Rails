@@ -1,0 +1,33 @@
+@import "colors"
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Bad+Script|Great+Vibes|Homemade+Apple|Poiret+One&subset=cyrillic')
+
+// font-family: 'Bad Script', cursive
+// font-family: 'Poiret One', cursive
+// font-family: 'Great Vibes', cursive
+// font-family: 'Homemade Apple', cursive
+// font-family: 'Amatic SC', cursive
+
+html
+  min-height: 100%
+  display: flex
+  flex-direction: column
+
+body
+  margin: 0
+  display: flex
+  flex-direction: column
+  flex: auto
+  font-size: 14px
+  font-family: Arial
+
+body ::selection
+  background: $pink
+  color: $white
+
+a
+  text-decoration: none
+  display: block
+  color: $sea
+  &:hover, &:focus, &:active
+    text-decoration: none
+    color: inherit

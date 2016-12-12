@@ -1,0 +1,57 @@
+@import "colors"
+
+.header
+  width: 100%
+  max-height: 170px
+  margin: 0 auto 30px
+  padding: 10px 5%
+  background: rgba($pale, 0.5)
+  box-sizing: border-box
+  text-transform: uppercase
+  display: flex
+  font-family: 'Amatic SC', cursive
+  &__logo
+    flex: 1
+    font-size: 110px
+    color: $sea
+    text-align: center
+  &__menu
+    flex: 1
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &-first
+      width: 100%
+      display: flex
+      flex-wrap: wrap
+      justify-content: flex-end
+      a
+        color: $sea
+    &-second
+      display: flex
+      justify-content: flex-end
+      margin: 5px auto
+    &-link
+      padding: 15px 30px
+      border: 1px solid $pink
+      background: $pink
+      color: $white
+      margin: 0 15px
+      font-size: 28px
+      line-height: 1
+      &:hover
+        background: transparent
+        color: $sea
+    &-item
+      height: 70px
+      padding: 20px
+      text-align: center
+      box-sizing: border-box
+      flex: 1
+      cursor: pointer
+      font-size: 35px
+      line-height: 1
+      color: $sea
+      &:hover, &:active
+        a
+          color: $pink
