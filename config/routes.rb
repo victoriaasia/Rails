@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   match 'work/index', to: 'work#index', via: 'get'
 
-  match 'work/choose_theme', to: 'work#choose_theme', via: get
+  match 'choose_theme', to: 'work#choose_theme', via: get
+  # get 'work#choose_theme'
 
   match 'work/display_theme', to: 'work#display_theme', via: post
 
