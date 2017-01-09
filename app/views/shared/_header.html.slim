@@ -12,3 +12,13 @@ header.header
     div.header__menu-second
       = link_to 'join now', root_path, class: 'header__menu-link'
       = link_to 'log in', root_path, class: 'header__menu-link'
+
+
+
+  div.locale
+    - #.ru_link
+    = link_to image_tag("ru_flag.jpg", alt: "", title: "Русский"), locale: :ru
+    = link_to image_tag("en_flag.jpg", alt: "", title: "English"), locale: :en
+    div.locale-current
+      b
+        = I18n.locale

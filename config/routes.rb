@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
   root 'work#index'
-
   match 'work/index', to: 'work#index', via: 'get'
+  match 'work', to: 'work#index', via: 'get'
 
-  match 'choose_theme', to: 'work#choose_theme', via: get
-  # get 'work#choose_theme'
+  match 'work/choose_theme', to: 'work#choose_theme', via: :get, :as=>'choose_theme'
 
-  match 'work/display_theme', to: 'work#display_theme', via: post
+  match 'work/display_theme', to: 'work#display_theme', via: :post
 
   resources :themes
   resources :values
@@ -15,10 +14,9 @@ Rails.application.routes.draw do
   root 'main#index'
   get 'main/index'
 
-  get 'main/help'
+  match 'main/help', to: 'main#help', via: 'get'
 
   get 'main/contacts'
-  # match 'contacts', to: 'main#contacts', via: 'get'
 
   get 'main/about'
 
