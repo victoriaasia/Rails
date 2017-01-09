@@ -9,6 +9,7 @@
   box-sizing: border-box
   text-transform: uppercase
   display: flex
+  align-items: center
   font-family: 'Amatic SC', cursive
   &__logo
     flex: 1
@@ -36,7 +37,7 @@
       border: 1px solid $pink
       background: $pink
       color: $white
-      margin: 0 15px
+      margin: 0 45px
       font-size: 28px
       line-height: 1
       &:hover
@@ -55,3 +56,15 @@
       &:hover, &:active
         a
           color: $pink
+
+.locale
+  display: flex
+  flex-direction: column
+  height: 100px
+  justify-content: space-between
+  a
+    width: 40px
+  img
+    max-width: 100%
+  &-current
+    text-align: center
