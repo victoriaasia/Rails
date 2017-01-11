@@ -1,10 +1,8 @@
 shared:
- header:
-   logo_title: "Experteese на Ruby_on_Rails"
-   home: "Главная"
-   help: "Помощь"
-   sign_in: "Войти"
-   sign_out: "Выйти"
-   person: "Я"
-   profile: "Моя страница"
-   settings: "Настройки"
+  header:
+    logo: "Экспертиза"
+    contacts: "контакты"
+    about: "О проекте"
+    help: "Помощь"
+    join_now: "Регистрация"
+    log_in: "Войти"
