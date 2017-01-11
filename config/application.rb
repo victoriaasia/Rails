@@ -22,6 +22,8 @@ module Experteese
     config.i18n.fallbacks = true
     config.i18n.fallbacks = [:en]
 
+    config.i18n.default_locale = :en
+
     config.i18n.enforce_available_locales = true
   end
 end

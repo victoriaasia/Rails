@@ -20,12 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 shared:
- header:
-   logo_title: "Experteese in Ruby_on_Rails"
-   home: "Home"
-   help: "Help"
-   sign_in: "Sign in"
-   sign_out: "Sign out"
-   person: "Me"
-   profile: "My page"
-   settings: "Settings"
+  header:
+    logo: "expert!se"
+    contacts: "contacts"
+    about: "about"
+    help: "help"
+    join_now: "join now"
+    log_in: "log in"
