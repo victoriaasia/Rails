@@ -12,9 +12,14 @@ Rails.application.configure do
   # Show full error reports.
   config.consider_all_requests_local = true
 
+  # config.action_controller.perform_caching = true
+  # config.cache_store = :dalli_store
+
+
   # Enable/disable caching. By default caching is disabled.
   if Rails.root.join('tmp/caching-dev.txt').exist?
     config.action_controller.perform_caching = true
+    # config.cache_store = :dalli_store
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
@@ -22,8 +27,14 @@ Rails.application.configure do
     }
   else
     config.action_controller.perform_caching = false
-
     config.cache_store = :null_store
+  end
+
+  # action_cable
+  Rails.root.join('config/cable.yml')
+  
+  Rails.application.configure do
+    config.action_cable.url = "ws://localhost:3000/cable"
   end
 
   # Don't care if the mailer can't send.

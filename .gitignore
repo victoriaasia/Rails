@@ -19,4 +19,13 @@
 
 # Ignore Byebug command history file.
 .byebug_history
-.idea
+
+/config/secrets.yml
+secrets.yml
+
+.idea/*
+#workspace.xml
+
+
+# Ignore Spring files.
+/spring/*.pid

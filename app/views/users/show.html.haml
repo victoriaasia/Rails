@@ -1,0 +1,14 @@
+- provide(:title, @user.name)
+-#%p#notice= notice
+
+
+.show-user
+  %div.show-user__name
+    = gravatar_for @user
+    = @user.name
+
+  %div.show-user__mail
+    %b= t('.email')
+    = @user.email
+
+  = link_to t('.work'), work_path, class: "btn app-button"

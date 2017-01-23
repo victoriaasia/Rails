@@ -8,17 +8,7 @@ class MainControllerTest < ActionDispatch::IntegrationTest
 
   test "should get help" do
     get main_help_url
-    assert_response :success
-  end
-
-  test "should get contacts" do
-    get main_contacts_url
-    assert_response :success
-  end
-
-  test "should get about" do
-    get main_about_url
-    assert_response :success
+     assert_response :success
   end
 
 end
