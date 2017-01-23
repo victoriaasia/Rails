@@ -1,70 +1,127 @@
-@import "colors"
+@import "mixins"
 
 .header
   width: 100%
   max-height: 170px
-  margin: 0 auto 30px
+  margin: 0 auto
   padding: 10px 5%
-  background: rgba($pale, 0.5)
+  background: rgba($pale, 0.7)
   box-sizing: border-box
   text-transform: uppercase
   display: flex
   align-items: center
-  font-family: 'Amatic SC', cursive
   &__logo
     flex: 1
-    font-size: 110px
+    font-size: 100px
     color: $sea
     text-align: center
-  &__menu
-    flex: 1
-    display: flex
-    flex-direction: column
-    justify-content: space-between
-    &-first
-      width: 100%
-      display: flex
-      flex-wrap: wrap
-      justify-content: flex-end
-      a
-        color: $sea
-    &-second
-      display: flex
-      justify-content: flex-end
-      margin: 5px auto
-    &-link
-      padding: 15px 30px
-      border: 1px solid $pink
-      background: $pink
-      color: $white
-      margin: 0 45px
-      font-size: 28px
-      line-height: 1
-      &:hover
-        background: transparent
-        color: $sea
-    &-item
-      height: 70px
-      padding: 20px
-      text-align: center
-      box-sizing: border-box
-      flex: 1
-      cursor: pointer
-      font-size: 35px
-      line-height: 1
+    font-family: 'Poiret One', cursive
+    padding: 0 60px
+    &:hover
       color: $sea
-      &:hover, &:active
+  &__menu
+    flex: 2
+    font-family: 'Poiret One', cursive
+    &-list
+      display: flex
+      justify-content: space-around
+      align-items: center
+      padding: 0
+      margin: 0
+      height: 70px
+      font-size: 1em
+      li
+        list-style-type: none
+      a
+        text-align: center
+        color: $sea
+    &-link
+      flex: 1
+      padding: 0 10px
+      margin: 0 15px
+      height: 100%
+      border: 1px solid $pink
+      background: transparent
+      font-size: 1.5em
+      line-height: 1
+      display: flex
+      align-items: center
+      justify-content: center
+      cursor: pointer
+      &:hover
+        background: rgba($pink, 0.8)
         a
-          color: $pink
+          color: $white
+    // &-item
+    //   height: 70px
+    //   padding: 20px
+    //   text-align: center
+    //   box-sizing: border-box
+    //   flex: 1
+    //   cursor: pointer
+    //   font-size: 35px
+    //   line-height: 1
+    //   color: $sea
+    //   &:hover, &:active
+    //     a
+    //       color: $pink
+
 
 .locale
   display: flex
-  flex-direction: column
+  align-items: center
   height: 100px
+  width: 140px
   justify-content: space-between
   a
-    width: 40px
+    width: 50px
   img
-    max-width: 100%
+    min-width: 100%
   &-current
     text-align: center
+
+.dropdown
+  width: 100%
+  &-toggle
+    float: left
+    width: 100%
+  &-menu
+    width: 100%
+    border: 0
+    border-radius: 0
+    top: 30px
+    a
+      color: $sea !important
+      &:hover
+        color: $sea
+
+.gravatar
+  float: left
+  width: 20px
+  height: 20px
+  margin-right: 5px
+
+.dropdown
+  position: relative
+  &-menu
+    display: none
+    background: rgba($pale, 0.9)
+    position: absolute
+    padding: 30px 0px
+    top: 46px
+    li
+      padding: 10px 0
+      &:hover
+        background: $pink
+        a
+          color: $white !important
+    .divider
+      padding: 0
+      background: rgba($pink, 0.6)
+      width: 100%
+      height: 1px
+      margin: 10px 0
+
+.dropdown.open
+  .dropdown-menu
+    display: block

@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-
+  
   has_many :microposts, dependent: :destroy
   has_many :values, dependent: :destroy
 
@@ -25,7 +25,7 @@ class User < ApplicationRecord
     #   User.all.pluck(:id)
     # end
     # User.find(ids)
-
+    
     Rails.cache.fetch('User.all') { all }
   end
 
@@ -43,6 +43,6 @@ class User < ApplicationRecord
   def create_remember_token
     self.remember_token = User.encrypt(User.new_remember_token)
   end
-
+  
 
 end

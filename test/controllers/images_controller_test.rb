@@ -17,7 +17,7 @@ class ImagesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create image" do
     assert_difference('Image.count') do
-      post images_url, params: { image: { ave_value: @image.ave_value, created_at: @image.created_at, file: @image.file, name: @image.name, theme_id: @image.theme_id, updated_at: @image.updated_at } }
+      post images_url, params: { image: {  } }
     end
 
     assert_redirected_to image_url(Image.last)
@@ -34,7 +34,7 @@ class ImagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update image" do
-    patch image_url(@image), params: { image: { ave_value: @image.ave_value, created_at: @image.created_at, file: @image.file, name: @image.name, theme_id: @image.theme_id, updated_at: @image.updated_at } }
+    patch image_url(@image), params: { image: {  } }
     assert_redirected_to image_url(@image)
   end
 

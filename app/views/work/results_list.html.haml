@@ -1,0 +1,40 @@
+
+.results-page{ title: t(".page_title")}
+
+  - if @composite_results.blank?
+    %table{ :style => "table-layout: auto; title: 'Нет оценок';" }
+      .result
+        %h2=  t(".no_values")
+        %h2=  t(".select_theme")
+        -#%tr
+          -#%td.left.grey.italic
+          -#No Values results...
+  
+  - else
+    %table{ :style => "table-layout: auto; title: 'Оценки';" }
+      .results-title
+        %h2= t(".results_rate")
+      %tr
+        %th= t(".results_image-name")
+
+        %th= t(".results_image")
+        -#%th user_id
+        %th= t(".results_image-value")
+
+        %th= t(".results_image-date")
+
+      -#- @composite_results.each do |composite_diag|
+      - @composite_results_paged.each do |composite_diag|
+        %tr.one_row
+          %td= composite_diag.name
+          %td= image_tag('/assets/pictures/' + composite_diag.file, {:width => "53", :height =>"47", title: "Tested image"} )
+          -#                                                          , :class => "opinion_image_preview ttip"
+          -#%td= composite_diag.user_id
+          %td{ :style => "color: rgba(122, 13, 75, 1);" }= composite_diag.ave_value
+          %td= composite_diag.created_at.strftime('%d.%m.%y ')
+
+
+      = paginate @composite_results_paged
+      -#.pagination= render 'results_list' work_path  'javascript:history.go(-1);'
+
+  = link_to t(".return_to_main"), work_path,  class: "btn app-button", title: "Go to main page"

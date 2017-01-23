@@ -17,7 +17,7 @@ class ValuesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create value" do
     assert_difference('Value.count') do
-      post values_url, params: { value: { created_at: @value.created_at, image_id: @value.image_id, updated_at: @value.updated_at, user_id: @value.user_id, value: @value.value } }
+      post values_url, params: { value: {  } }
     end
 
     assert_redirected_to value_url(Value.last)
@@ -34,7 +34,7 @@ class ValuesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update value" do
-    patch value_url(@value), params: { value: { created_at: @value.created_at, image_id: @value.image_id, updated_at: @value.updated_at, user_id: @value.user_id, value: @value.value } }
+    patch value_url(@value), params: { value: {  } }
     assert_redirected_to value_url(@value)
   end
 
