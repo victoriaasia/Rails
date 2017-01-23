@@ -128,7 +128,7 @@ RSpec.describe MainController, type: :controller    do #  , focus: true
       context '- check visit the help_path'  do
         before { visit help_path }
 
-        it { should have_content ('Пользовательский интерфейс Experteese построен по принципу "одностраничного приложения".') }
+        it { should have_content ('Пользовательский интерфейс Expertise построен по принципу "одностраничного приложения".') }
         # it { should have_title ("Index | #{base_title}") }
         it { should have_title(full_title('Help')) }
         it { should_not have_title('| Help') }
@@ -152,7 +152,7 @@ RSpec.describe MainController, type: :controller    do #  , focus: true
       context '- check visit the contacts_path' do
         before { visit contacts_path }
 
-        it { should have_content ('Приложение Experteese разработано в качестве практического материала') }
+        it { should have_content ('Приложение Expertise построен по принципу одностраничного приложения.') }
         # it { should have_title ("Index | #{base_title}") }
         it { should have_title(full_title('Contacts')) }
         it { should_not have_title('| Contacts') }
@@ -187,7 +187,7 @@ RSpec.describe MainController, type: :controller    do #  , focus: true
       context '- check visit the about_path' do
         before { visit about_path }
 
-        it { should have_content ('Приложение Experteese предназначено для сбора оценок предпочтений пользователей.') }
+        it { should have_content ('Приложение Expertise предназначено для сбора оценок предпочтений пользователей.') }
         it { should have_title(full_title('About')) }
         it { should_not have_title('| About') }
       end
