@@ -1,4 +1,3 @@
 # README
 
-#h1
-  RoR app
+## RoR app :gem:
